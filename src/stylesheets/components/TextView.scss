@@ -1,0 +1,6 @@
+@import 'stylesheets/constants.scss';
+@import 'stylesheets/components/Input.scss';
+
+.TextView {
+    @use .Input;
+}

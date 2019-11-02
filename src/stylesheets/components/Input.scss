@@ -1,0 +1,38 @@
+@import 'stylesheets/constants.scss';
+
+.Input {
+    user-select: none;
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+}
+.Input > input {
+    width: $width;
+    height: $height;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $fontColor;
+
+    padding-left: 5px;
+
+    &::-webkit-input-placeholder {
+        font-style: italic;
+        font-family: $fontFamily;
+        font-size: $fontSize;
+        opacity: .8;
+    }
+
+    outline: none;
+    border-width: 1px;
+    border-color: $darkGray;
+    border-radius: 3px;
+    border-style: solid;
+
+    box-shadow: 0;
+    transition: box-shadow $duration ease-in-out;
+
+    &:focus {
+        box-shadow: 0 0 3px 1px $info;
+        border-color: $lightGray;
+    }
+}

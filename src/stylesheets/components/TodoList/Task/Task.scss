@@ -1,0 +1,19 @@
+@import 'stylesheets/constants.scss';
+
+.Task {
+    display: flex;
+    align-items: center;
+    padding-bottom: $defaultSpacing;
+}
+.Task__trash {
+    color: $darkGray;
+    font-size: 16px;
+    user-select: none;
+    outline: none;
+
+    transition: color $duration ease-in-out;
+}
+.Task__trash:hover,
+.Task__trash:focus {
+    color: $danger;
+}
