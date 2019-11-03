@@ -1,8 +1,6 @@
 @import 'stylesheets/constants.scss';
 
 .Task {
-    display: flex;
-    align-items: center;
     padding-bottom: $defaultSpacing;
 }
 .Task__trash {
@@ -10,10 +8,65 @@
     font-size: 16px;
     user-select: none;
     outline: none;
+    opacity: 0;
 
-    transition: color $duration ease-in-out;
+    transition-property: color, opacity;
+    transition-duration: $duration;
+}
+.Task__trash--editMode {
+    opacity: 1;
 }
 .Task__trash:hover,
 .Task__trash:focus {
     color: $danger;
+}
+.Task,
+.Task__checkbox,
+.Task__manager {
+    display: flex;
+    align-items: center;
+}
+.Task__manager--renderView {
+    overflow: hidden;
+}
+.Task__checkbox {
+    padding-right: 5px;
+}
+.Task__manager,
+.Task__input {
+    flex-grow: 1;
+}
+.Task__input {
+    border: 1px solid $white;
+}
+.Task__input--lineThrough {
+    text-decoration: line-through;
+}
+.Task__input--renderView {
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    
+    transition-property: border-color;
+    transition-duration: $duration;
+}
+.Task__input__pencil {
+    opacity: 0;
+    color: $darkGray;
+    font-size: 14px;
+    user-select: none;
+    outline: none;
+
+    transition-property: opacity;
+    transition-duration: $duration;
+}
+.Task__manager--renderView:hover {
+    .Task__input {
+        border-color: $lightGray;
+        border-radius: 3px;
+    }
+    .Task__input__pencil,
+    .Task__trash {
+        opacity: 1;
+    }
 }

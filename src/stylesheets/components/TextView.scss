@@ -1,6 +1,23 @@
 @import 'stylesheets/constants.scss';
 @import 'stylesheets/components/Input.scss';
 
+.TextView::before {
+    content: "";
+    height: 100%;
+    display: inline-flex;
+    vertical-align: middle;
+}
 .TextView {
-    @use .Input;
+    @extend .Input;
+
+    padding-left: 6px;
+
+    font-style: italic;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $lightFontColor;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
 }

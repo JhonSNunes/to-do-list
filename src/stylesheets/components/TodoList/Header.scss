@@ -1,0 +1,24 @@
+@import 'stylesheets/constants.scss';
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    font-family: $fontFamily;
+    color: $fontColor;
+}
+.Header__title {
+    padding: 10px;
+}
+.Header__title,
+.Header__title__text {
+    display: flex;
+}
+.Header__title__text {
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+}
+.Header__title__totalChecked {
+    font-weight: 900;
+    justify-content: end;
+}

@@ -3,8 +3,16 @@
 .TodoList {
     padding: $defaultSpacing;
 }
+.TodoList__tasks {
+    height: 100%;
+    overflow-y: auto;
+    padding: $defaultSpacing; 
+    padding-left: $defaultSpacing * 1.5;
+    padding-right: $defaultSpacing * 1.5;
+}
 .TodoList__add {
     text-decoration: none;
     color: $info;
     padding-left: $defaultSpacing;
+    padding-bottom: $defaultSpacing * 5;
 }

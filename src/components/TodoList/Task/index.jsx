@@ -1,17 +1,17 @@
-import React from 'react';
-import 'stylesheets/components/TodoList/Task/Task.scss';
+import { connect } from 'react-redux';
+import Task from './Task';
+import {
+    handleCheckTask,
+    handleDescription,
+    removeTask,
+    getIsChecked,
+    getDescription
+} from 'components/TodoList/redux'
 
-import TextView from 'components/TextView';
-import Input from 'components/Input';
-
-export default ({ taskKey, checked, description, onChangeCheckbox, onChangeText, onDelete }) => (
-    <div className='Task'>
-        <input type='checkbox' checked={checked} onChange={onChangeCheckbox} />
-        <Input
-            text={description}
-            onChange={onChangeText}
-            placeholder='Clique aqui e digite algo...'
-        />
-        <a href={'#'} className={'Task__trash icon-trash'} onClick={onDelete} />
-    </div>
-);
+export default connect(
+    ( state, { taskKey } ) => ({
+        checked: getIsChecked( state, taskKey ),
+        description: getDescription( state, taskKey ),
+    }),
+    { handleCheckTask, handleDescription, removeTask }
+)( Task );

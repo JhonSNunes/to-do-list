@@ -1,0 +1,38 @@
+@import 'stylesheets/constants.scss';
+
+.Checkbox {
+    height: 14px;
+    width: 14px;
+    outline: none;
+    position: relative;
+    background: $white;
+    border: 1px solid $darkGray;
+    border-radius: 3px;
+    user-select: none;
+
+    transition: border-color $duration ease-in-out;
+
+    polyline {
+        fill: none;
+        stroke: $lightFontColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-dasharray: 25px;
+        stroke-dashoffset: -25px;
+        transition: all .3s ease;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+}
+.Checkbox:hover {
+    border-color: $lightFontColor;
+}
+.Checkbox--checked {
+    polyline {
+        stroke-dashoffset: 0px;
+    }
+}
+
