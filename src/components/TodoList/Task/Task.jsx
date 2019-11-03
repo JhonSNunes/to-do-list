@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { modifier, defineModifiers } from 'utils/modifiers';
-import 'stylesheets/components/TodoList/Task/Task.scss';
+import 'stylesheets/components/TodoList/Task.scss';
 
 import TextView from 'components/TextView';
 import Input from 'components/Input';
@@ -22,7 +22,7 @@ export default props => {
     const useEditMode = () => handleViewMode(false);
 
     const handleCheckbox = () => handleCheckTask( taskKey, !checked );
-    const handleTaskDescription = event => handleDescription( taskKey, event.target.value );
+    const handleTaskDescription = text => handleDescription( taskKey, text );
     const removeTodoTask = () => removeTask( taskKey );
 
     const renderDescription = () => {
@@ -61,7 +61,10 @@ export default props => {
                     {renderDescription()}
                     {renderView && <span className={modifier('Task__input__pencil', defineModifiers({ renderView })) + ' icon-pencil'} />}
                 </div>
-                <a href={'#'} className={modifier('Task__trash', defineModifiers({ editMode: !renderView })) + ' icon-trash'} onClick={removeTodoTask} />
+                <span
+                    className={modifier('Task__trash', defineModifiers({ editMode: !renderView })) + ' icon-trash'}
+                    onClick={removeTodoTask}
+                />
             </div>
         </div>
     );

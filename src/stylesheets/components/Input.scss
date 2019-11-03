@@ -2,11 +2,29 @@
 
 .Input {
     user-select: none;
+    position: relative;
     display: flex;
     flex-grow: 1;
     align-items: center;
     width: $width;
     height: $height;
+    justify-content: flex-end;
+}
+.Input__deleteAll {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    padding-right: 2px;
+    font-size: 12px;
+    color: $darkGray;
+    user-select: none;
+    outline: none;
+    cursor: pointer;
+
+    transition: color $duration ease-in-out;
+}
+.Input__deleteAll:hover {
+    color: $fontColor;
 }
 .Input > input {
     width: $width;
@@ -30,7 +48,7 @@
     border-radius: 3px;
     border-style: solid;
 
-    box-shadow: 0;
+    box-shadow: none;
     transition: box-shadow $duration ease-in-out;
 
     &:focus {

@@ -25,16 +25,16 @@
       "src": "typicons"
     },
     {
-      "uid": "50e664a6f12199784c02600b2ccfd60a",
-      "css": "list",
-      "code": 59395,
-      "src": "elusive"
+      "uid": "a66cdc7278e6b33b8bd44a141f5e1a8d",
+      "css": "plus-circled",
+      "code": 59397,
+      "src": "entypo"
     },
     {
-      "uid": "97bd5542ed3e143d2ee9b60e14487615",
-      "css": "list-add",
-      "code": 59396,
-      "src": "entypo"
+      "uid": "cd9ad52ef0740bb86ff11af9646d4859",
+      "css": "list",
+      "code": 59398,
+      "src": "elusive"
     }
   ]
 }

@@ -4,6 +4,7 @@
     padding-bottom: $defaultSpacing;
 }
 .Task__trash {
+    cursor: pointer;
     color: $darkGray;
     font-size: 16px;
     user-select: none;

@@ -2,12 +2,17 @@
 
 .Header {
     display: flex;
+    user-select: none;
     flex-direction: column;
     font-family: $fontFamily;
-    color: $fontColor;
+    color: $white;
+    background: $fishPound;
 }
 .Header__title {
     padding: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    text-shadow: 0px 1px 2px $fontColor;
 }
 .Header__title,
 .Header__title__text {
@@ -17,8 +22,10 @@
     flex-grow: 1;
     align-items: center;
     justify-content: center;
+    font-size: 32px;
 }
 .Header__title__totalChecked {
+    position: absolute;
     font-weight: 900;
     justify-content: end;
 }

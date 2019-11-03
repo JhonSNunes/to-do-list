@@ -20,13 +20,12 @@ export default class TodoList extends Component {
                     {list.sortBy(task => task.get('order')).keySeq().map( taskKey => (
                         <Task key={taskKey} taskKey={taskKey} />
                     ))}
-                    <a
-                        href={'#'}
+                    <button
                         onClick={addTask}
-                        className='TodoList__add icon-list-add'
+                        className='TodoList__add icon-plus-circled'
                     >
                         Adicionar item
-                    </a>
+                    </button>
                 </div>
             </>
         );

@@ -3,17 +3,17 @@
 .ProgressBar {
     height: $defaultSpacing;
     width: 100%;
-    border: 1px solid $darkGray;
+    border: 1px solid $white;
     border-radius: 3px;
     overflow: hidden;
 }
 .Progress {
     height: $width;
-    background: $info;
+    background: $white;
 
     transition-property: width, background;
     transition-duration: $duration;   
 }
 .Progress--filled {
-    background: $success;
+    background: $info;
 }

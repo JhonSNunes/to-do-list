@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'to-do-list';
-  src: url('../font/to-do-list.eot?4310816');
-  src: url('../font/to-do-list.eot?4310816#iefix') format('embedded-opentype'),
-       url('../font/to-do-list.woff2?4310816') format('woff2'),
-       url('../font/to-do-list.woff?4310816') format('woff'),
-       url('../font/to-do-list.ttf?4310816') format('truetype'),
-       url('../font/to-do-list.svg?4310816#to-do-list') format('svg');
+  src: url('../font/to-do-list.eot?12234797');
+  src: url('../font/to-do-list.eot?12234797#iefix') format('embedded-opentype'),
+       url('../font/to-do-list.woff2?12234797') format('woff2'),
+       url('../font/to-do-list.woff?12234797') format('woff'),
+       url('../font/to-do-list.ttf?12234797') format('truetype'),
+       url('../font/to-do-list.svg?12234797#to-do-list') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'to-do-list';
-    src: url('../font/to-do-list.svg?4310816#to-do-list') format('svg');
+    src: url('../font/to-do-list.svg?12234797#to-do-list') format('svg');
   }
 }
 */
@@ -58,5 +58,5 @@
 .icon-trash:before { content: '\e800'; } /* '' */
 .icon-pencil:before { content: '\e801'; } /* '' */
 .icon-cancel:before { content: '\e802'; } /* '' */
-.icon-list:before { content: '\e803'; } /* '' */
-.icon-list-add:before { content: '\e804'; } /* '' */
+.icon-plus-circled:before { content: '\e805'; } /* '' */
+.icon-list:before { content: '\e806'; } /* '' */

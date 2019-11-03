@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import "./styles.scss";
 import ListContainer from './containers/ListContainer';
 import * as serviceWorker from './serviceWorker';
+
+import "stylesheets/application.scss";
 
 ReactDOM.render(<ListContainer />, document.getElementById('root'));
 
