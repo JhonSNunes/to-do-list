@@ -4,19 +4,23 @@
   "private": true,
   "homepage": "https://github.com/JhonSNunes/to-do-list",
   "dependencies": {
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "immutable": "^4.0.0-rc.12",
     "node-sass": "^4.13.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-redux": "^7.1.1",
     "react-scripts": "3.2.0",
+    "react-test-renderer": "^16.11.0",
     "redux": "^4.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test-coverage": "set CI=true && react-scripts test --coverage"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,6 +35,12 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "coverageReporters": [
+      "json",
+      "html"
     ]
   }
 }
