@@ -13,7 +13,7 @@ export default () => (
     <Provider store={store}>
         <div className='ListContainer'>
             <div className='ListPanel'>
-                <TodoList title='To do list' />
+                <TodoList title='Todo list' />
             </div>
         </div>
     </Provider>

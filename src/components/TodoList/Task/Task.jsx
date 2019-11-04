@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { modifier, defineModifiers } from 'utils/modifiers';
+import {
+    ENTER
+} from 'utils/constants';
 import 'stylesheets/components/TodoList/Task.scss';
 
 import TextView from 'components/TextView';
@@ -17,6 +20,7 @@ export default props => {
     } = props;
 
     const [renderView, handleViewMode] = useState( true );
+    const inputRef = useRef(null);
 
     const useViewMode = () => handleViewMode(true);
     const useEditMode = () => handleViewMode(false);
@@ -24,6 +28,13 @@ export default props => {
     const handleCheckbox = () => handleCheckTask( taskKey, !checked );
     const handleTaskDescription = text => handleDescription( taskKey, text );
     const removeTodoTask = () => removeTask( taskKey );
+    const handleKeyDown = event => {
+        const key = event.which;
+
+        if ( key === ENTER ) {
+            inputRef.current.blur();
+        }
+    };
 
     const renderDescription = () => {
         let inputText = description;
@@ -39,8 +50,10 @@ export default props => {
         if ( !renderView ) {
             component = (
                 <Input
+                    ref={inputRef}
                     text={description}
                     onChange={handleTaskDescription}
+                    onKeyDown={handleKeyDown}
                     onBlur={useViewMode}
                 />
             );

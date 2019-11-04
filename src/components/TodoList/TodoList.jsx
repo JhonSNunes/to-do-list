@@ -24,7 +24,7 @@ export default class TodoList extends Component {
                         onClick={addTask}
                         className='TodoList__add icon-plus-circled'
                     >
-                        Adicionar item
+                        Adicionar tarefa
                     </button>
                 </div>
             </>

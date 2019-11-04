@@ -1,8 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useRef, forwardRef } from 'react';
 import 'stylesheets/components/Input.scss';
 
-export default ({ text, placeholder, onChange, onBlur }) => {
-    const inputRef = useRef(null);
+export default forwardRef(({ text, placeholder, onChange, onBlur, onKeyDown }, inputRef) => {
     const deleteRef = useRef(null);
 
     const onBlurEvent = event => {
@@ -39,6 +38,7 @@ export default ({ text, placeholder, onChange, onBlur }) => {
                 onChange={onTextChange}
                 ref={inputRef}
                 onBlur={onBlurEvent}
+                onKeyDown={onKeyDown}
                 tabIndex='0'
             />
             <span
@@ -49,4 +49,4 @@ export default ({ text, placeholder, onChange, onBlur }) => {
             />
         </div>
     );
-}; 
+}); 

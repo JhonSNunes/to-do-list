@@ -1,21 +1,23 @@
 import { Map, fromJS } from 'immutable';
 import * as constants from './constants';
 
-const initial = Map({});
+const generateId = list => {
+    const id = '_' + Math.random().toString(36).substr(2, 9);
+
+    if ( list && list.has( id ) ) {
+        return generateId( list );
+    }
+    return id;
+};
+
 const initialTask = fromJS({
     checked: false,
     description: '',
     order: 1
 });
-
-const generateId = list => {
-    const id = '_' + Math.random().toString(36).substr(2, 9);
-
-    if ( list.has( id ) ) {
-        return generateId( list );
-    }
-    return id;
-};
+const initial = Map({
+    [generateId()]: initialTask
+});
 
 export default ( store = initial, action = {} ) => {
     const {
